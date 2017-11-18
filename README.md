@@ -3,7 +3,7 @@
 ## About
 ```
 # ระบบจัดการฐานข้อมูล(CRUD) ด้วย nodejs (express framework)
-# พัฒนาบนหลักการ MVC
+# พัฒนาบนหลักการ Model View Controller
 # เหมาะสำหรับผู้ที่เคยพัฒนา Yii2
 ```
 
@@ -11,7 +11,8 @@
 
 ## Installation
 ```
-# npm i
+# cd node-crud-example
+# npm install
 # restore db_example.sql to mysql
 ```
 
