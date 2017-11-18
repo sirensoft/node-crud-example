@@ -14,6 +14,7 @@
 # cd node-crud-example
 # npm install
 # restore db_example.sql to mysql
+
 ```
 
 ## Configuration
@@ -23,8 +24,9 @@
 
 ## Test
 ```
-browser:  http://localhost:3000
-login :  admin , 112233
+# npm start
+# browser:  http://localhost:3000
+# login :  admin , 112233
 
 ```
 
