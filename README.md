@@ -2,7 +2,7 @@
 
 ## About
 ```
-# ระบบจัดการฐานข้อมูล(CRUD) ด้วย nodejs (express framework)
+# จัดการฐานข้อมูล MySQL(CRUD) ด้วย nodejs (express framework)
 # พัฒนาบนหลักการ Model View Controller
 # เหมาะสำหรับผู้ที่เคยพัฒนา Yii2
 ```
