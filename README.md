@@ -1,5 +1,11 @@
 # NODEJS (ExpressJS Framework) CRUD Example
 
+## About
+```
+# ระบบจัดการฐานข้อมูล(CRUD) ด้วย nodejs (express framework)
+# พัฒนาบนหลักการ MVC
+# เหมาะสำหรับผู้ที่เคยพัฒนา Yii2
+```
 
 ![](./ss/ss1.png)
 
