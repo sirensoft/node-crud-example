@@ -2,3 +2,9 @@
 
 ## SS
 ![](./ss/ss1.png)
+
+## Installation
+
+```
+# npm i
+```
