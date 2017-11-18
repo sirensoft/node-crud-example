@@ -14,3 +14,11 @@
 # config/db.json
 ```
 
+## Test
+```
+browser:  http://localhost:3000
+login :  admin , 112233
+
+```
+
+
