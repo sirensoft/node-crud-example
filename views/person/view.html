@@ -1,0 +1,8 @@
+<%- include('../layouts/_header.html') -%>
+    <h1>View</h1>
+    <%=JSON.stringify(person)%>
+        <span>id:<%=person[0].id%></span><br>
+        <span>name:<%=person[0].name%></span><br>
+        <span>lname:<%=person[0].lname%></span><br>
+        <span>birth:<%=person[0].birth%></span>
+        <%- include('../layouts/_footer.html') -%>

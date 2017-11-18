@@ -1,0 +1,49 @@
+<%- include('../layouts/_header.html') -%>
+    <p>
+        ผู้ใช้ :
+        <%=session.username%>
+            <a href='/auth/logout'>
+            (logout)
+        </a>
+
+    </p>
+    <h1>
+        <%= title %>
+    </h1>
+    <a href="/person/create" class="btn btn-success"> เพิ่ม </a>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>lname</th>
+                <th>birth</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%persons.forEach(function(p){%>
+                <tr>
+                    <td>
+                        <%=p.id%>
+                    </td>
+                    <td>
+                        <%=p.name%>
+                    </td>
+                    <td>
+                        <%=p.lname%>
+                    </td>
+                    <td>
+                        <%=p.birth%>
+                    </td>
+                    <td>
+                        <a href="/person/view/<%=p.id%>">ดู</a> |
+                        <a href="/person/update/<%=p.id%>">แก้ไข</a> |
+                        <a href="/person/delete/<%=p.id%>" onclick="return confirm('Are you sure?')">ลบ</a>
+                    </td>
+                </tr>
+                <%})%>
+        </tbody>
+    </table>
+    <%- include('../layouts/_footer.html') -%>

@@ -1,0 +1,7 @@
+<%- include('../layouts/_header.html') -%>
+    <h1>Update</h1>
+
+    <form method="POST" action="/person/update/<%=id%>">
+        <%- include('_form.html',{person:person})-%>
+    </form>
+    <%- include('../layouts/_footer.html') -%>
