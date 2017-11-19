@@ -49,6 +49,8 @@ app.get('/', function(req, res) {
     res.redirect('/person')
 })
 
+app.use('/api', require('./controllers/apiController'));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
