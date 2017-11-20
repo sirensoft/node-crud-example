@@ -10,7 +10,6 @@ router.use(authCheck);
 router.get('/', async function(req, res) {
     let persons = await mPerson.findAll();
 
-
     res.render('../views/person/index', { title: 'Person', persons: persons })
 })
 
@@ -19,25 +18,28 @@ router.get('/view/:id', async function(req, res) {
     res.render('../views/person/view', { person: person })
 })
 
-router.get('/create', (req, res) => {
-    res.render('../views/person/create')
+
+
+router.all('/create', async(req, res) => {
+    if (req.method === 'GET') {
+        res.render('../views/person/create')
+    }
+    if (req.method === 'POST') {
+        await mPerson.create(req.body);
+        res.redirect('/person');
+    }
 })
 
-router.post('/create', async(req, res) => {
-    console.log(req.body)
-    await mPerson.create(req.body);
-    res.redirect('/person');
-})
+router.all('/update/:id', async(req, res) => {
+    if (req.method === 'GET') {
+        let person = await mPerson.findOne(req.params.id);
+        res.render('../views/person/update', { id: req.params.id, person: person })
+    }
+    if (req.method === 'POST') {
+        await mPerson.update(req.params.id, req.body);
+        res.redirect('/person');
+    }
 
-router.get('/update/:id', async(req, res) => {
-    let person = await mPerson.findOne(req.params.id);
-    res.render('../views/person/update', { id: req.params.id, person: person })
-})
-
-router.post('/update/:id', async(req, res) => {
-
-    await mPerson.update(req.params.id, req.body);
-    res.redirect('/person');
 })
 
 router.get('/delete/:id', async function(req, res, next) {
