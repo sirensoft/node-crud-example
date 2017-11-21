@@ -9,7 +9,6 @@ router.use(authCheck);
 
 router.get('/', async function(req, res) {
     let persons = await mPerson.findAll();
-
     res.render('../views/person/index', { title: 'Person', persons: persons })
 })
 

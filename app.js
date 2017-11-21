@@ -47,7 +47,8 @@ app.use('/auth', require('./controllers/authController'));
 app.use('/person', require('./controllers/personController'));
 app.get('/', function(req, res) {
     res.redirect('/person')
-})
+});
+app.use('/map', require('./controllers/mapController'));
 
 app.use('/api', require('./controllers/apiController'));
 
